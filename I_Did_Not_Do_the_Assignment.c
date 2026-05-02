@@ -1,26 +1,32 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n, isPrime = 1;
 
     scanf("%d", &n);
 
     if (n <= 1)
-    {
-        return 0;
-    }
+        isPrime = 0;
 
     for (int i = 2; i <= n / 2; i++)
     {
         if (n % i == 0)
         {
-            printf("NO PUNISHMENT\n");
-            return 0;
+            isPrime = 0;
+            break;
         }
     }
-    for(int i = 0; i < n; i++)
+
+    if (isPrime==0)
     {
-        printf("I DID NOT DO THE ASSIGNMENT.\n");
+        for(int i = 0; i < n; i++)
+        {
+            printf("I DID NOT DO THE ASSIGNMENT.\n");
+        }
+    }
+    else
+    {
+        printf("NO PUNISHMENT\n");
     }
 
     return 0;
