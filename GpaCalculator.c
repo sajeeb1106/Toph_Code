@@ -2,23 +2,23 @@
 int main()
 {
     int T, N, i, j;
-    float p, sum, gpa;
+    float g, sum, gpa;
 
     printf("Enter The Number of Test: ");
     scanf("%d", &T);
 
     for(i = 1; i <= T; i++)
     {
-        printf("Enter The Number Of Subject(for %dst Test): ", i);
+        printf("Enter The Number Of Subject for Test %d: ", i);
         scanf("%d", &N);
 
         sum=0;
 
-        for(j = 0; j < N; j++)
+        for(j = 1; j <= N; j++)
         {
-            printf("Enter Grade of Subject %d: ", j + 1);
-            scanf("%f", &p);
-            sum = sum + p;
+            printf("Enter Grade of Subject %d: ", j);
+            scanf("%f", &g);
+            sum = sum + g;
         }
         gpa = sum / N;
 
